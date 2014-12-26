@@ -1,20 +1,6 @@
 @import "settings";
 @import "foundation";
 
-// These are our named breakpoints. You can use them in our breakpoint function like this:
-// @include breakpoint(medium) { // Medium and larger styles }
-// $breakpoints: (
-//   small: rem-calc(0),
-//   medium: rem-calc(640),
-//   large: rem-calc(1200),
-//   xlarge: rem-calc(1440),
-//   xxlarge: rem-calc(1920),
-// );
-
-// All of the names in this list will be output as classes in your CSS,
-// like small-12, medium-6, and so on.
-// $breakpoint-classes: (small medium large);
-
 @media (max-height: 780px) {
   .split .left {
     overflow: auto;
@@ -26,7 +12,6 @@
   width: 20%;
   position: relative;
   z-index: 2;
-  //background: #b2181c;
 }
 @media (max-width: 640px) {
   .split .left {
@@ -51,6 +36,11 @@
     width: 16%;
   }
 }
+
+.split .left {
+  background-color: $dark-color;
+}
+
 
 // right
 
@@ -82,3 +72,53 @@
     width: 84%;
   }
 }
+
+div.headshot {
+  text-align: center;
+  background-color: #000;
+  padding-top: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header-nav {
+  color: $white-color;
+}
+
+.headshot img {
+  border-radius: 100%;
+  width: 180px;
+  height: auto;
+  border: 3px solid $white-color;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+.site-nav {
+  // background-color: $dark-color;
+  color: $white-color;
+}
+
+.main-nav {
+  color: $white-color;
+}
+
+.main-nav a {
+  color: $white-color;
+}
+
+.site-nav li {
+  list-style: none;
+}
+
+// *, *:before, *:after {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }

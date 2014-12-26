@@ -95,16 +95,28 @@ $include-css: (
 // $body-antialiased: true;
 
 // Application Colors
-// $primary-color: #00558b;
-// $secondary-color: #f1f1f1;
+$primary-color: #F44336;
+$secondary-color: #FFCDD2;
+$accent-color: #FF5252;
 // $alert-color: #F04124;
 // $info-color: #A0D3E8;
 // $success-color: #43AC6A;
 // $warning-color: #F08A24;
-// $dark-color: #232323;
-// $gray: #dfdfdf;
-// $gray-dark: darken($gray, 8);
-// $gray-light: lighten($gray, 8);
+$white-color: #FFFFFF;
+$dark-color: #D32F2F;
+$gray: #727272;
+$gray-dark: darken($gray, 8);
+$gray-light: lighten($gray, 8);
+
+// .dark-primary-color    { background: #D32F2F; }
+// .default-primary-color { background: #F44336; }
+// .light-primary-color   { background: #FFCDD2; }
+// .text-primary-color    { color: #FFFFFF; }
+// .accent-color          { background: #FF5252; }
+// .primary-text-color    { color: #212121; }
+// .secondary-text-color  { color: #727272; }
+// .divider-color         { border-color: #B6B6B6; }
+
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 4px;
