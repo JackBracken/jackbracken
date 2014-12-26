@@ -9,21 +9,30 @@
     <script src="/assets/js/routes.js"></script>
     <script src="/assets/js/app.js"></script>
   </head>
-  <body>
-    <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a><strong>Foundation for Apps</strong></a></li>
-          <li><a href="#">Gnome</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
+  <body class="split">
+    <header class="left">
+      <!-- Fill in nav url -->
+      <a class="headshot" title="Jack Bracken" href="#">
+        <img src="/assets/img/headshot.jpg" alt="head shot">
+      </a>
+      <nav class="site-nav" id="navigation">
+        <ul class="main-nav">
+          <li class="twitter">
+            <a class="main-nav-item" href="#">tweetar</a>
+          </li>
+          <li class="500px">
+            <a class="main-nav-item" href="#">5poopy peex</a>
+          </li>
+          <li class="github">
+            <a class="main-nav-item" href="#">gut poop</a>
+          </li>
         </ul>
-      </div>
-      <div class="grid-content">
-        <div class="grid-container">
-          <div ng-class="['ui-animation']" ui-view></div>
-        </div>
+      </nav>
+    </header>
+    <div class="right grid-frame vertical">
+
+      <div class="right grid-block">
+        <div ng-class="['ui-animation']" ui-view=""></div>
       </div>
     </div>
   </body>
