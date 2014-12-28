@@ -104,6 +104,8 @@ $accent-color: #FF5252;
 // $warning-color: #F08A24;
 $white-color: #FFFFFF;
 $dark-color: #D32F2F;
+$darker-color: darken($dark-color, 8);
+
 $gray: #727272;
 $gray-dark: darken($gray, 8);
 $gray-light: lighten($gray, 8);

@@ -38,7 +38,7 @@
 }
 
 .split .left {
-  background-color: $dark-color;
+  background-color: $darker-color;
 }
 
 
@@ -96,29 +96,19 @@ div.headshot {
   display: block;
 }
 
-nav {
-  display: block;
-}
-
-.site-nav {
-  // background-color: $dark-color;
-  color: $white-color;
-}
-
 .main-nav {
-  color: $white-color;
-}
+  margin: 0;
+  padding: 0;
 
-.main-nav a {
-  color: $white-color;
-}
+  a {
+    color: $white-color;
+  }
 
-.site-nav li {
-  list-style: none;
-}
+  > li {
+    float: none;
+    width: auto;
+    background-color: $dark-color;
+    list-style: none;
+  }
 
-// *, *:before, *:after {
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-// }
+}
