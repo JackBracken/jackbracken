@@ -1,85 +1,70 @@
 @import "settings";
 @import "foundation";
 
-@media (max-height: 780px) {
-  .split .left {
-    overflow: auto;
-  }
-}
-
-/* Split Layout for Home and top-level pages */
+/* Static/responsive sidebar */
+/* Left side */
 .split .left {
   width: 20%;
   position: relative;
   z-index: 2;
-}
-@media (max-width: 640px) {
-  .split .left {
+  background-color: $darker-color;
+
+  @media (max-height: 780px) {
+    overflow: auto;
+  }
+
+  @media (max-width: 640px) {
     width: 100%;
     float: none;
   }
-}
-@media (min-width: 641px) {
-  .split .left {
+
+  @media (min-width: 641px) {
     width: 25%;
     position: fixed;
     height: 100%;
   }
-}
-@media (min-width: 1025px) {
-  .split .left {
+  
+  @media (min-width: 1025px) {
     width: 20%;
   }
-}
-@media (min-width: 1441px) {
-  .split .left {
+
+  @media (min-width: 1441px) {
     width: 16%;
   }
 }
 
-.split .left {
-  background-color: $darker-color;
-}
-
-
-// right
-
+/* Right side */
 .split .right {
   width: 80%;
   position: relative;
   z-index: 1;
-}
-@media (max-width: 640px) {
-  .split .right {
+
+  @media (max-width: 640px) {
     width: 100%;
     float: none;
     overflow: hidden;
   }
-}
-@media (min-width: 641px) {
-  .split .right {
+
+  @media (min-width: 641px) {
     width: 75%;
     float: right;
   }
-}
-@media (min-width: 1025px) {
-  .split .right {
+
+  @media (min-width: 1025px) {
     width: 80%;
   }
-}
-@media (min-width: 1441px) {
-  .split .right {
+
+  @media (min-width: 1441px) {
     width: 84%;
   }
+
 }
 
+/* Headshot/top part of sidebar */
 div.headshot {
   text-align: center;
   background-color: #000;
-  padding-top: 2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
 }
 
 .header-nav {
@@ -96,6 +81,8 @@ div.headshot {
   display: block;
 }
 
+/* Sidebar nav */
+
 .main-nav {
   margin: 0;
   padding: 0;
@@ -107,8 +94,19 @@ div.headshot {
   > li {
     float: none;
     width: auto;
-    background-color: $dark-color;
+    background-color: $darker-color;
     list-style: none;
+
+    > .main-nav-item {
+      display: block;
+      padding: 1rem 2rem;
+    }
   }
 
+  // .github { background-color: lighten($darker-color, 12) }
+  .github { background-color: $dark-color; }
+  .fivepx { background-color: lighten($darker-color, 6) }
+  .cv { background-color: lighten($darker-color, 4) }
+  .contact {}
 }
+
