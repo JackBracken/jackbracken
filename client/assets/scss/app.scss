@@ -89,6 +89,9 @@ div.headshot {
 
   a {
     color: $white-color;
+    &:hover {
+      background-color: darken($darker-color, 12);
+    }
   }
 
   > li {
@@ -97,16 +100,17 @@ div.headshot {
     background-color: $darker-color;
     list-style: none;
 
+    &:nth-child(1) { background-color: lighten($darker-color, 12) }
+    &:nth-child(2) { background-color: lighten($darker-color, 8) }
+    &:nth-child(3) { background-color: lighten($darker-color, 4) }
+    &:nth-child(4) { background-color: $darker-color; }
+ 
     > .main-nav-item {
       display: block;
       padding: 1rem 2rem;
     }
   }
 
-  // .github { background-color: lighten($darker-color, 12) }
-  .github { background-color: $dark-color; }
-  .fivepx { background-color: lighten($darker-color, 6) }
-  .cv { background-color: lighten($darker-color, 4) }
-  .contact {}
+
 }
 
