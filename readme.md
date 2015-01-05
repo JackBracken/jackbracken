@@ -12,7 +12,7 @@ Personal site built with angularjs and Zurb Foundation. See current version live
   1. Twitter
   2. Github
   3. Email
-  4 500px
+  4. 500px
   5. LinkedIn
 * Write mission statement for homepage
 * Create github project cards for Programming page
