@@ -1,6 +1,22 @@
-# Foundation for Apps Template
+# jackbracken.me
 
-This is the default template project for Foundation for Apps. It's powered by Node, Gulp, Angular, and libsass. It provides you with a basic template to get started with Angular and Foundation for Apps. If you're already an Angular developer, you may instead want to install the components into your own stack using Bower: `bower install foundation-apps`
+Personal site built with angularjs and Zurb Foundation. See current version live [here](http://jackbracken.me).
+
+## TODO
+
+* Individual photograph pages with:
+  1. Camera and exposure meta-information
+  2. Map integration
+  3. Maybe a comments feed
+* Contact page with cards for:
+  1. Twitter
+  2. Github
+  3. Email
+  4 500px
+  5. LinkedIn
+* Write mission statement for homepage
+* Create github project cards for Programming page
+* Use 500px api to pull in photographs automatically instead of hard-coding themg
 
 ## Requirements
 
@@ -15,16 +31,12 @@ You'll need the following software installed to get started.
 
 ## Get Started
 
-Clone this repository, where `app` is the name of your app.
-
-```bash
-git clone https://github.com/zurb/foundation-apps-template.git app
-```
+Clone this repository.
 
 Change into the directory.
 
 ```bash
-cd app
+cd jackbracken
 ```
 
 Install the dependencies. Running `npm install` will also automatically run `bower install` after. If you're running Mac OS or Linux, you may need to run `sudo npm install` instead, depending on how your machine is configured. Running `bundle` will install the correct version of Sass for the template.
@@ -35,7 +47,7 @@ bower install
 bundle
 ```
 
-While you're working on your project, run:
+While working on the project, run:
 
 ```bash
 npm start
