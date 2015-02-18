@@ -3,6 +3,12 @@
 
 /* Static/responsive sidebar */
 /* Left side */
+@media print {
+  .split .left {
+    display: none;
+  }
+}
+
 .split .left {
   width: 20%;
   position: relative;
@@ -112,6 +118,39 @@ div.headshot {
   }
 
 }
+
+/* CV specific */
+
+.timeframe {
+  font-style: italic;
+  text-align: right;
+}
+
+.skills {
+  
+}
+
+.details {
+  @include breakpoint(medium) {
+    border-left: 1px solid $primary-color;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  p:last-of-type, ul{
+    margin-bottom: 0;
+  }
+}
+
+#experience {
+  .grid-block {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Gallery specific */
 
 .gallery-item {
   background: #000;
