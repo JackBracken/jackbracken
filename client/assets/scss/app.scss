@@ -1,12 +1,27 @@
 @import "settings";
 @import "foundation";
 
+/* General styles */
+ul {
+  list-style-image: url("../img/list-arrow.png");
+}
 /* Static/responsive sidebar */
 /* Left side */
 @media print {
   .split .left {
     display: none;
   }
+
+  ul, ol, p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #experience, #projects, #skills {
+    // .grid-block {
+      margin-bottom: 0rem;
+    }
+  // }
 }
 
 .split .left {
@@ -127,11 +142,10 @@ div.headshot {
 
 .timeframe {
   font-style: italic;
-  text-align: right;
-}
-
-.skills {
   
+  @include breakpoint(medium) {
+    text-align: right;
+  }
 }
 
 .details {
@@ -143,14 +157,24 @@ div.headshot {
     text-align: justify;
   }
 
-  p:last-of-type, ul{
+  ul {
     margin-bottom: 0;
+    padding-left: -1rem;
+    list-style-position: outside;
+  }
+
+  header > p {
+    margin-bottom: 0.5rem;
+  }
+
+  ul, p {
+    margin-bottom: 0rem;
   }
 }
 
-#experience {
+#experience, #projects, #skills {
   .grid-block {
-    margin-bottom: 2rem;
+     margin-bottom: 1rem;
   }
 }
 
