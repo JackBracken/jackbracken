@@ -2,27 +2,43 @@
 @import "foundation";
 
 /* General styles */
+
+.primary {
+  color: $primary-color;
+}
+
 ul {
   list-style-image: url("../img/list-arrow.png");
 }
-/* Static/responsive sidebar */
-/* Left side */
+
+.print-only {
+  display: none;
+}
+
+
+/* Print specific styles */
 @media print {
+  .print-only {
+    display: initial;
+  }
+
   .split .left {
     display: none;
   }
 
-  ul, ol, p {
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
+  h2 {
+    font-size: 1.6rem;
   }
 
-  #experience, #projects, #skills {
-    // .grid-block {
-      margin-bottom: 0rem;
-    }
-  // }
+  ul, ol, p {
+    font-size: 0.8rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
 }
+
+/* Static/responsive sidebar */
+/* Left side */
 
 .split .left {
   width: 20%;
@@ -140,6 +156,26 @@ div.headshot {
 
 /* CV specific */
 
+.obfuscate-email { 
+  unicode-bidi: bidi-override;
+  direction: rtl; 
+}
+
+#personal-information {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#experience, 
+#projects, 
+#skills {
+  .grid-block {
+     margin-bottom: 0.8rem;
+  }
+}
+
 .timeframe {
   font-style: italic;
   
@@ -151,10 +187,6 @@ div.headshot {
 .details {
   @include breakpoint(medium) {
     border-left: 1px solid $primary-color;
-  }
-
-  p {
-    text-align: justify;
   }
 
   ul {
@@ -169,12 +201,6 @@ div.headshot {
 
   ul, p {
     margin-bottom: 0rem;
-  }
-}
-
-#experience, #projects, #skills {
-  .grid-block {
-     margin-bottom: 1rem;
   }
 }
 
