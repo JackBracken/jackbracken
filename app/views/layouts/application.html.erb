@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jackbracken</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="split">
+  <header class="left">
+    <!-- Fill in nav urls -->
+    <div class="headshot">
+      <a class="headshot" title="Jack Bracken" href="#">
+
+        <img src="<%= image_path('headshot.jpg') %>" alt="head shot">
+        <h3 class="header-nav">Jack Bracken</h3> 
+      </a>
+    </div>
+
+    <nav class="site-nav" id="navigation">
+      <ul class="main-nav">
+      
+        <li ui-sref-active="active">
+          <a class="main-nav-item" ui-sref="home">
+            <strong>Home</strong>
+          </a>
+        </li>
+      
+        <li ui-sref-active="active">
+          <a class="main-nav-item" ui-sref="photography">
+            <strong>Photography</strong>
+          </a>
+        </li>
+      
+        <li ui-sref-active="active">
+          <a class="main-nav-item" ui-sref="curriculum-vitae">
+            <strong>Curriculum Vitae</strong>
+          </a>
+        </li>
+      
+        <li ui-sref-active="active">
+          <a class="main-nav-item" ui-sref="contact">
+            <strong>Contact</strong>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <div class="grid-container">
+    <%= yield %>
+  </div>
+</body>
+</html>
