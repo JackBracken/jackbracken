@@ -1,23 +1,21 @@
+<div class="grid-container">
 <section id="personal-information" class="grid-block">
 	<section>
 		<h1 class="primary">Jack Bracken</h1>
 
-		<p class="print-only">
+		<p>
 			<!-- Email -->
-			<img src="../assets/img/envelope.png" width="16px" heigh="16px"/>
-			<!-- Email text direction reversed in CSS -->
-			<span class="obfuscate-email">em.nekcarbkcaj@tcatnoc  </span>
-		</p>
-
-		<p class="print-only">
+			<%= image_tag("envelope.png", size: "16x16", alt: "Email") %>
+			&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#106;&#097;&#099;&#107;&#098;&#114;&#097;&#099;&#107;&#101;&#110;&#046;&#109;&#101;
+		
 			<!-- Phone number -->
-			<img src="../assets/img/phone.png" width="14px" heigh="14px"/>
-			<span class="phone">  +353 85 752 6944</span>
+			<%= image_tag("phone.png", size: "14x14", alt: "Phone", style: "margin-left: 14px;") %>
+			  +353 85 752 6944
 		</p>
-		<br/>
-		<p class="print-only">
+		
+		<p>
 			<!-- Github -->
-			<span class="">https://github.com/JackBracken</span>
+			https://github.com/JackBracken
 		</p>
 	</section>
 </section>
@@ -174,3 +172,4 @@
 		</section>
 	</article>
 </section>
+</div>

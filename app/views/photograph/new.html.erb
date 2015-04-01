@@ -1,0 +1,5 @@
+<%= simple_form_for @photograph, url: new_photograph_path do |f| %>
+  <%= f.input_field :title %>
+  <%= f.input_field :date_taken, as: :date %>
+  <%= f.input_field :photo, as: :file %>
+<% end %>
