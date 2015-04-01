@@ -1,0 +1,52 @@
+// Place all the styles related to the Photograph controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Gallery specific */
+
+.gallery-item {
+  background: #000;
+  display: block;
+
+  .title {
+    position: absolute;
+    padding: 1rem;
+    right: 0;
+    background-color: $darker-color;
+    color: $white-color;
+    visibility: hidden;
+    z-index: 1;
+    font-weight: bold;
+  }
+
+  .date {
+    position: absolute;
+    margin-top: 2.2rem;
+    padding: 0.8rem;
+    right: 0;
+    background-color: $darker-color;
+    color: $white-color;
+    visibility: hidden;
+    z-index: 2;
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    .title, .date {
+      visibility: visible;
+    }
+  }
+
+  img {
+    opacity: 0.9;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
+}
+
+.gallery {
+  > .grid-block {
+    overflow-y: hidden;
+  }
+}
