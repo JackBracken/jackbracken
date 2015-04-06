@@ -1,14 +1,15 @@
 class PhotographController < ApplicationController
 	def index
-		@photographs = Photograph.order(:name).page params[:page]
+		@photographs = Photograph.order(:title).page params[:page]
 	end
 
 	def create
 		@photograph = Photograph.create(photo_params)
+
 		if @photograph.save
-
+			redirect_to photograph_index_url
 		else
-
+			redirect_to new_photograph_url
 		end
 	end
 
@@ -24,6 +25,6 @@ class PhotographController < ApplicationController
 	private
 
 		def photo_params
-			params.require(:photograph).permit(:photo)
+			params.require(:photograph).permit(:title, :date_taken, :photo)
 		end
 end

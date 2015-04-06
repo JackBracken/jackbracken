@@ -1,1 +1,8 @@
-<% paginate @photographs %>
+<div class="gallery">
+	<div class="grid-block wrap">
+		<% if @photographs.any? %>
+			<%= render partial: 'photograph', collection: @photographs %>
+			<%= paginate @photographs %>
+		<% end %>
+	</div>
+</div>
