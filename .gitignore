@@ -23,4 +23,4 @@ Capfile
 npm-debug.log
 .DS_Store
 public/system
-
+*.un~
