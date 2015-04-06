@@ -22,3 +22,5 @@ config
 Capfile
 npm-debug.log
 .DS_Store
+public/system
+
