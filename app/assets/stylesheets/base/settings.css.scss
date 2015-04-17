@@ -109,6 +109,7 @@ $darker-color: darken($dark-color, 8);
 
 $gray: #727272;
 $gray-dark: darken($gray, 8);
+$gray-darker: darken($gray-dark, 16);
 $gray-light: lighten($gray, 8);
 
 // $alert-color: #F04124;

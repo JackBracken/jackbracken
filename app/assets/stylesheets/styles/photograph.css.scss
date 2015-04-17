@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* Gallery specific */
 
+.gallery {
+  > .grid-block {
+    overflow-y: hidden;
+  }
+}
+
 .gallery-item {
   background: #000;
   display: block;
@@ -13,7 +19,7 @@
     right: 0;
     background-color: $darker-color;
     color: $white-color;
-    visibility: hidden;
+    visibility: visible;
     z-index: 1;
     font-weight: bold;
   }
@@ -25,7 +31,7 @@
     right: 0;
     background-color: $darker-color;
     color: $white-color;
-    visibility: hidden;
+    visibility: visible;
     z-index: 2;
     font-size: 0.8rem;
   }
@@ -45,8 +51,43 @@
   }
 }
 
-.gallery {
-  > .grid-block {
-    overflow-y: hidden;
+.gallery-single-item {
+  padding-bottom: 4em;
+  padding-top: 2em;
+  width: 100%;
+  // height: auto;
+  background-color: $gray-darker;
+
+  .title {
+   
   }
+
+  .date {
+    font-size: 0.6em;
+  }
+
+  img, .title {
+    color: $primary-color;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  img {
+    cursor: pointer;
+  }
+  
+}
+
+.metadata {
+  margin: 2rem;
+}
+
+.google-map {
+    max-width: 100%;
+}
+
+.above-fold {
+  margin-top: 2em;
+  background-color: $gray-darker;
+  margin-bottom: 4em;
 }
