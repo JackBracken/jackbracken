@@ -1,5 +1,7 @@
 <article class="gallery-item">
 	<span class="title"><%= photograph.title %></span>
-	<span class="date"><%= photograph.date_taken %></span>
-	<%= image_tag photograph.photo.url %>
+	<%= link_to(photograph) do %>
+		<span class="date"><%= photograph.date_taken %></span>
+		<%= image_tag photograph.photo.url %>
+	<% end %>
 </article>

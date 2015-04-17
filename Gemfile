@@ -28,6 +28,9 @@ gem 'paperclip', '~> 4.2'
 # Pagination
 gem 'kaminari'
 
+# URL slugs
+gem 'friendly_id', '~> 5.1.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,4 +54,13 @@ group :development, :test do
 
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+# Deployment
+
+group :development do
+	gem 'capistrano'
+	gem 'capistrano-rails'
+	gem 'capistrano-rvm'
+	gem 'capistrano-passenger'
 end

@@ -1,4 +1,8 @@
 class Photograph < ActiveRecord::Base
+	extend FriendlyId
+
+	friendly_id :title, use: :slugged
+
 	paginates_per 15
 
 	validates :title, 		presence: true, uniqueness: { case_sensitive: false }
