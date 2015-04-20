@@ -52,15 +52,12 @@
 }
 
 .gallery-single-item {
-  padding-bottom: 4em;
-  padding-top: 2em;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
   width: 100%;
-  // height: auto;
   background-color: $gray-darker;
-
-  .title {
-   
-  }
+  max-height: 90vh;
+  position: relative;
 
   .date {
     font-size: 0.6em;
@@ -68,26 +65,17 @@
 
   img, .title {
     color: $primary-color;
-    width: 90%;
-    margin-left: 5%;
   }
 
   img {
+    display: block;
+    max-height: 80vh;
+    max-width: 90%;
     cursor: pointer;
-  }
-  
+    margin: auto;
+  } 
 }
 
-.metadata {
-  margin: 2rem;
-}
-
-.google-map {
-    max-width: 100%;
-}
-
-.above-fold {
-  margin-top: 2em;
-  background-color: $gray-darker;
-  margin-bottom: 4em;
+iframe {
+  pointer-events: none;
 }
