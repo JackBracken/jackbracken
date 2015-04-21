@@ -67,12 +67,26 @@
     color: $primary-color;
   }
 
+  .arrow {
+    top: 50%;
+    // position: absolute;
+  }
+
+  .navigate-previous {
+    left: 0;
+    // width: 50%;
+  }
+
+  .navigate-next {
+    right: 0;
+    // width: 50%;
+  }
+
   img {
     display: block;
-    max-height: 80vh;
-    max-width: 90%;
-    cursor: pointer;
     margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
   } 
 }
 

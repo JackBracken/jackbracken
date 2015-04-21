@@ -28,6 +28,11 @@ class PhotographController < ApplicationController
 
 	def show
 		@photograph = Photograph.friendly.find(params[:id])
+		@next				= Photograph.where("id > ?", @photograph.id)
+														.first
+
+		@prev				= Photograph.where("id < ?", @photograph.id)
+														.last
 	end
 
 	private

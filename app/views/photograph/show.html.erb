@@ -1,7 +1,18 @@
 <section class="gallery-single-item">
 	<div class="">
-		<%= link_to @photograph.photo.url do %>
-			<%= image_tag @photograph.photo.url %>
+
+		<% if @prev.present? %>
+			<%= link_to photograph_path(@prev), id: "previous" do %>
+				<div class="arrow"></div>
+			<% end %>
+		<% end %>
+
+		<%= image_tag @photograph.photo.url %>
+
+		<% if @next.present? %>
+			<%= link_to photograph_path(@next), id: "next" do %>
+				<div class="arrow"></div>
+			<% end %>
 		<% end %>
 	</div>
 </section>
