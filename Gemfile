@@ -31,6 +31,8 @@ gem 'kaminari'
 # URL slugs
 gem 'friendly_id', '~> 5.1.0'
 
+gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -61,6 +63,6 @@ end
 group :development do
 	gem 'capistrano'
 	gem 'capistrano-rails'
-	gem 'capistrano-rvm'
-	gem 'capistrano-passenger'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-puma'
 end
