@@ -21,6 +21,16 @@ class PhotographController < ApplicationController
 		@photograph = Photograph.new
 	end
 
+	def edit
+		@photograph = Photograph.friendly.find(params[:id])
+	end
+
+	def update
+		@photograph = Photograph.friendly.find(params[:id])
+		@photograph.update_attributes(photo_params)
+		redirect_to @photograph
+	end
+
 	def destroy
 		@photograph.destroy
 		redirect_to root_url
@@ -38,6 +48,15 @@ class PhotographController < ApplicationController
 	private
 
 		def photo_params
-			params.require(:photograph).permit(:title, :date_taken, :photo)
+			params.require(:photograph).permit(:title, 
+																				 :date_taken, 
+																				 :photo,
+																				 :camera_model,
+                                         :aperture,
+                                         :focal_length,
+                                         :shutter_speed,
+                                         :iso,
+                                         :map_location
+                                         )
 		end
 end

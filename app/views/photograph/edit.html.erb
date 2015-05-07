@@ -1,9 +1,8 @@
 <div class="grid-container ">
-	<div class="">
-	<h1>Upload photograph</h1>
-	</div>
-	<div class="">
-	<%= simple_form_for @photograph, url: photograph_index_path do |f| %>
+
+	<h1>Edit photograph</h1>
+
+	<%= simple_form_for @photograph, url: photograph_path do |f| %>
 	  <%= f.input_field :title, placeholder: 'Title' %>
 	  <%= f.input_field :camera_model, placeholder: 'Camera Model' %>
 	  <%= f.input_field :aperture, placeholder: 'Aperture' %>
@@ -15,5 +14,4 @@
 	  <%= f.input_field :photo, as: :file %>
 	  <%= f.button :submit %>
 	<% end %>
-	</div>
 </div>

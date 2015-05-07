@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417133112) do
+ActiveRecord::Schema.define(version: 20150427112804) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 20150417133112) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.string   "slug"
+    t.string   "camera_model"
+    t.string   "aperture"
+    t.string   "focal_length"
+    t.string   "shutter_speed"
+    t.string   "iso"
+    t.string   "map_location"
   end
 
   add_index "photographs", ["slug"], name: "index_photographs_on_slug", unique: true
