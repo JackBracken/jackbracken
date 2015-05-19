@@ -55,12 +55,14 @@
 </section>
 
 <script>
-		var map = L.map('map').setView([<%= @photograph.map_location %>], 11);
+		var map = L.map('map', {
+			scrollWheelZoom: false,
+			dragging: false
+		}).setView([<%= @photograph.map_location %>], 11);
 
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-
 
 		L.marker([<%= @photograph.map_location %>]).addTo(map);
 </script>
