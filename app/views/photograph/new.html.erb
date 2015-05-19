@@ -2,18 +2,52 @@
 	<div class="">
 	<h1>Upload photograph</h1>
 	</div>
-	<div class="">
+	
 	<%= simple_form_for @photograph, url: photograph_index_path do |f| %>
 	  <%= f.input_field :title, placeholder: 'Title' %>
+	  <div class="grid-block">
+	  	<%= f.input_field :date_taken, as: :date %>
+	  </div>
+	  <div class="grid-block">
 	  <%= f.input_field :camera_model, placeholder: 'Camera Model' %>
 	  <%= f.input_field :aperture, placeholder: 'Aperture' %>
+	  </div>
+	  <div class="grid-block">
 	  <%= f.input_field :focal_length, placeholder: 'Focal Length' %>
 	  <%= f.input_field :shutter_speed, placeholder: 'Shutter Speed' %>
+	  </div>
+	  <div class="grid-block">
 	  <%= f.input_field :iso, placeholder: 'ISO' %>
 	  <%= f.input_field :map_location, placeholder: 'Map Co-ordinates (in format x,y)' %>
-	  <%= f.input_field :date_taken, as: :date %>
-	  <%= f.input_field :photo, as: :file %>
+	  </div>
+	  <div id="map" style="width: 100%; height: 420px"></div>
+	  <div class="grid-block">
+	  <%= f.input_field :photo, as: :file, class: 'button' %>
 	  <%= f.button :submit %>
+	  </div>
 	<% end %>
-	</div>
 </div>
+
+<script>
+		var map = L.map('map').setView([53.34, -6.25], 11);
+		var marker;
+		var markerSet = false;
+
+		function onMapClick(e) {
+			if(!markerSet){
+    			marker = new L.marker(e.latlng).addTo(map);
+    			markerSet = true;
+    		} else {
+	    		marker.setLatLng(e.latlng);
+	    		marker.update();
+    		}
+
+    		$('#photograph_map_location').val(e.latlng.lat + ', ' + e.latlng.lng);
+		}
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+		
+		map.on('click', onMapClick);
+</script>
