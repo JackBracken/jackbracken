@@ -33,6 +33,12 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'puma'
 
+gem 'mail_form'
+
+group :production do
+  gem 'pg'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
