@@ -20,7 +20,9 @@ vendor/bundle
 
 build
 .sass-cache
-config
+config/deploy.rb
+config/database.yml
+config/deploy
 Capfile
 npm-debug.log
 .DS_Store
