@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427112804) do
+ActiveRecord::Schema.define(version: 20150526160253) do
+
+  create_table "contact_pages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "from"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
