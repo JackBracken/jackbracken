@@ -1,0 +1,14 @@
+<%= simple_form_for(@contact_page) do |f| %>
+
+	<div class="grid-block">
+	<%= f.input_field :title, placeholder: 'What is this about?' %>
+	<%= f.input_field :from, placeholder: 'How can I contact you?' %>
+	</div>
+	<div class="grid-block">
+	<%= f.input_field :body, placeholder: 'More details?' %>
+	</div>
+
+	<div class="grid-block">
+	<%= f.button :submit, 'Send' %>
+	</div>
+<% end %>
