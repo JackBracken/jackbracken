@@ -6,7 +6,7 @@
   font-weight: bold; }
 
 ul {
-  list-style-image: url("list-arrow.png"); }
+  list-style-image: image-url("list-arrow.png"); }
 
 .print-only {
   display: none; }
@@ -121,18 +121,23 @@ div.headshot {
       display: block;
       padding: 1rem 2rem; }
 
-/* CV specific */
+/* CV and contact specific */
 
 .obfuscate-email { 
   unicode-bidi: bidi-override;
   direction: rtl; 
 }
 
-#personal-information {
+#personal-information,
+#contact {
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  a {
+    color: black;
+  }
 }
 
 #experience, 
