@@ -140,11 +140,49 @@ div.headshot {
   }
 }
 
+#contact_body {
+  height: 22rem;
+}
+
+button.send {
+  position: relative;
+  z-index: 20;
+  border: none;
+  display: inline-block;
+  height: 115px;
+  width: 115px;
+  background-color: $primary-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: -70px auto 55px auto;
+  color: #FFF;
+  outline: none;
+
+  border-radius: 130px;
+    -webkit-border-radius: 130px;
+    -moz-border-radius: 130px;
+    -ms-border-radius: 130px;
+    -o-border-radius: 130px;
+  
+  transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: rotate(360deg);
+    background-color: lighten($primary-color, 12%);
+  }
+}
+
+
 #experience, 
 #projects, 
 #skills {
   .grid-block {
-     margin-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 }
 
