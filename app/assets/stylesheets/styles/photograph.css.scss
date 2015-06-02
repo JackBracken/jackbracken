@@ -41,22 +41,13 @@
       visibility: visible;
     }
   }
-
-  img {
-    opacity: 0.9;
-  }
-
-  img:hover {
-    opacity: 1;
-  }
 }
 
 .gallery-single-item {
-  padding-bottom: 5vh;
+  height: 100vh;
   padding-top: 5vh;
   width: 100%;
   background-color: $gray-darker;
-  max-height: 90vh;
   position: relative;
 
   .date {
@@ -67,26 +58,11 @@
     color: $primary-color;
   }
 
-  .arrow {
-    top: 50%;
-    // position: absolute;
-  }
-
-  .navigate-previous {
-    left: 0;
-    // width: 50%;
-  }
-
-  .navigate-next {
-    right: 0;
-    // width: 50%;
-  }
-
   img {
     display: block;
     margin: auto;
     max-width: 90%;
-    max-height: 80vh;
+    max-height: 90vh;
   } 
 }
 
@@ -95,5 +71,6 @@ iframe {
 }
 
 #map {
-  height: 520px;
+  width: 100%;
+  height: 100vh;
 }
